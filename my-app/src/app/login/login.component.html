@@ -1,8 +1,8 @@
      <h1>Angular Login</h1>
      <div class="loginpage">
          <form (submit)="loginUser($event)">
-             <input type="email" name="email" id="email" placeholder="email" [(NgModel)]="email"/> <!--[(NgModel)]="email"-->
-		     <input type="password" name="password" id="password" placeholder="password" (NgModel)]="password"/> <!--  [(NgModel)]="password"-->
+             <input [(ngModel)]="username" type="email" name="username" id="username" placeholder="email"/> 
+		     <input [(ngModel)]="password" type="password" name="password" id="password" placeholder="password"/>
 		     <button type="submit">Login</button>
          </form>
 	 </div>

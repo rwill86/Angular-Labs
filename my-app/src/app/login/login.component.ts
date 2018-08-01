@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FormsModule} from '@angular/forms';
-import {Router} from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,20 +8,21 @@ import {Router} from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit{
-     email: string = '';
-     password: string = '';
-     constructor(private router: Router, private form: FormsModule) { }
+     username:string = '';
+     password:string = '';
+     constructor(private router:Router,private form:FormsModule){ 
+	 }
 
      ngOnInit(){
      }
   
-     loginuser(event){
+     loginUser(event){
 	     event.preventDefault();
-	     console.log(this.email);
-	     if(this.email == "someone@hotmail.com" && this.password == "pass"){
+	     console.log("Working");
+	     if(this.username == "someone@hotmail.com" && this.password == "pass"){
 		     this.router.navigateByUrl('/account');
 	     } else{
-		     alert("Email and password were incorrect." + "\nEmail:" + this.email + "\nPassword:" + this.password)
+		     alert("Username and password were incorrect." + "\nUsername:" + this.username + "\nPassword:" + this.password);
 		 }
      }
 }
