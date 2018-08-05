@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { AccountComponent } from './account/account.component';
 import { MenuComponent } from './menu/menu.component';
+import { StorageComponent } from './storage/storage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     AccountComponent,
-    MenuComponent
+    MenuComponent,
+    StorageComponent
   ],
   imports: [
     FormsModule,
